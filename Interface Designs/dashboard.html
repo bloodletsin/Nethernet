@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netheret IT Support - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-network-wired"></i>
+                <span>Netheret</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active"><i class="fas fa-chart-pie"></i> Dashboard</a>
+                <a href="tickets.html"><i class="fas fa-ticket-alt"></i> Tickets <span class="badge">12</span></a>
+                <a href="#"><i class="fas fa-calendar-alt"></i> Scheduling</a>
+                <a href="#"><i class="fas fa-book-open"></i> Knowledge Base</a>
+                <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+                <a href="#"><i class="fas fa-users"></i> Team</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+            <div class="sidebar-user">
+                <div class="avatar">JS</div>
+                <div class="user-meta">
+                    <span>John Smith</span>
+                    <small>Tier 2 Support</small>
+                </div>
+                <button class="logout"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, John</p>
+                </div>
+                <div class="topbar-actions">
+                    <div class="search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <button class="icon-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+                    <button class="btn-primary"><i class="fas fa-plus"></i> New Ticket</button>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:#134074"><i class="fas fa-ticket-alt"></i></div>
+                    <div class="stat-info">
+                        <span>Open Tickets</span>
+                        <h3>24</h3>
+                        <small class="positive">+12% this week</small>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:#0b2545"><i class="fas fa-clock"></i></div>
+                    <div class="stat-info">
+                        <span>Pending</span>
+                        <h3>8</h3>
+                        <small class="negative">-3% this week</small>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:#13315c"><i class="fas fa-check-circle"></i></div>
+                    <div class="stat-info">
+                        <span>Resolved Today</span>
+                        <h3>15</h3>
+                        <small class="positive">+5% today</small>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:#8da9c4"><i class="fas fa-star"></i></div>
+                    <div class="stat-info">
+                        <span>SLA Compliance</span>
+                        <h3>96%</h3>
+                        <small class="positive">+2% this month</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-grid">
+                    <button onclick="window.location.href='tickets.html'"><i class="fas fa-ticket-alt"></i> View Tickets</button>
+                    <button><i class="fas fa-calendar-plus"></i> Schedule Job</button>
+                    <button><i class="fas fa-book"></i> Knowledge Base</button>
+                    <button><i class="fas fa-chart-line"></i> Generate Report</button>
+                </div>
+            </div>
+
+            <!-- Recent Tickets -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Recent Tickets</h2>
+                    <a href="tickets.html" class="link">View All</a>
+                </div>
+                <div class="ticket-list">
+                    <div class="ticket-item">
+                        <span class="priority-dot high"></span>
+                        <div class="ticket-body">
+                            <h4>Network Outage - Floor 2</h4>
+                            <p>#TCK-2024-001 · High Priority</p>
+                        </div>
+                        <div class="ticket-meta">
+                            <span>Sarah J.</span>
+                            <small>2h ago</small>
+                        </div>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="priority-dot medium"></span>
+                        <div class="ticket-body">
+                            <h4>Email Configuration Issue</h4>
+                            <p>#TCK-2024-002 · Medium Priority</p>
+                        </div>
+                        <div class="ticket-meta">
+                            <span>Mike R.</span>
+                            <small>4h ago</small>
+                        </div>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="priority-dot low"></span>
+                        <div class="ticket-body">
+                            <h4>Printer Setup Request</h4>
+                            <p>#TCK-2024-003 · Low Priority</p>
+                        </div>
+                        <div class="ticket-meta">
+                            <span>Unassigned</span>
+                            <small>6h ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
