@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netheret IT Support - Tickets</title>
+    <link rel="stylesheet" href="css/tickets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-network-wired"></i>
+                <span>Netheret</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+                <a href="tickets.html" class="active"><i class="fas fa-ticket-alt"></i> Tickets <span class="badge">12</span></a>
+                <a href="#"><i class="fas fa-calendar-alt"></i> Scheduling</a>
+                <a href="#"><i class="fas fa-book-open"></i> Knowledge Base</a>
+                <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+                <a href="#"><i class="fas fa-users"></i> Team</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+            <div class="sidebar-user">
+                <div class="avatar">JS</div>
+                <div class="user-meta">
+                    <span>John Smith</span>
+                    <small>Tier 2 Support</small>
+                </div>
+                <button class="logout"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1>Ticket Management</h1>
+                    <p>View and manage all support tickets</p>
+                </div>
+                <div class="topbar-actions">
+                    <button class="btn-secondary"><i class="fas fa-filter"></i> Filter</button>
+                    <button class="btn-secondary"><i class="fas fa-download"></i> Export</button>
+                    <button class="btn-primary"><i class="fas fa-plus"></i> Create Ticket</button>
+                </div>
+            </header>
+
+            <!-- Filters -->
+            <div class="filters-bar">
+                <div class="filter-tabs">
+                    <button class="active">All</button>
+                    <button>Open</button>
+                    <button>In Progress</button>
+                    <button>Resolved</button>
+                    <button>Closed</button>
+                </div>
+                <div class="filter-selects">
+                    <select><option>All Priorities</option><option>High</option><option>Medium</option><option>Low</option></select>
+                    <select><option>All Assignees</option><option>Unassigned</option><option>Sarah J.</option><option>Mike R.</option></select>
+                    <select><option>Last 7 Days</option><option>Last 30 Days</option><option>Last 90 Days</option><option>All Time</option></select>
+                </div>
+            </div>
+
+            <!-- Ticket Table -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Subject</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Assignee</th>
+                            <th>Created</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#TCK-001</td>
+                            <td>Network outage on floor 2</td>
+                            <td><span class="badge-priority high">High</span></td>
+                            <td><span class="badge-status open">Open</span></td>
+                            <td>Sarah J.</td>
+                            <td>2024-01-15 09:30</td>
+                            <td class="actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Assign"><i class="fas fa-user-plus"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TCK-002</td>
+                            <td>Email configuration issue</td>
+                            <td><span class="badge-priority medium">Medium</span></td>
+                            <td><span class="badge-status progress">In Progress</span></td>
+                            <td>Mike R.</td>
+                            <td>2024-01-15 11:45</td>
+                            <td class="actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Assign"><i class="fas fa-user-plus"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TCK-003</td>
+                            <td>Printer setup request</td>
+                            <td><span class="badge-priority low">Low</span></td>
+                            <td><span class="badge-status pending">Pending</span></td>
+                            <td>Unassigned</td>
+                            <td>2024-01-15 14:20</td>
+                            <td class="actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Assign"><i class="fas fa-user-plus"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TCK-004</td>
+                            <td>Server backup failure</td>
+                            <td><span class="badge-priority high">High</span></td>
+                            <td><span class="badge-status progress">In Progress</span></td>
+                            <td>Sarah J.</td>
+                            <td>2024-01-15 16:00</td>
+                            <td class="actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Assign"><i class="fas fa-user-plus"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TCK-005</td>
+                            <td>New employee onboarding</td>
+                            <td><span class="badge-priority medium">Medium</span></td>
+                            <td><span class="badge-status open">Open</span></td>
+                            <td>Unassigned</td>
+                            <td>2024-01-15 17:30</td>
+                            <td class="actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Assign"><i class="fas fa-user-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button class="page-btn disabled"><i class="fas fa-chevron-left"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">4</button>
+                    <button class="page-btn">5</button>
+                    <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

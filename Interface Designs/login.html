@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netheret IT Support - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="login-left">
+                <div class="brand">
+                    <i class="fas fa-network-wired"></i>
+                    <h1>Netheret IT Support</h1>
+                    <p>Complete IT service management platform</p>
+                </div>
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" required placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" required placeholder="Enter your password">
+                            <button type="button" class="toggle-password" onclick="togglePassword()">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+                </form>
+                <div class="login-footer">
+                    <span>Need help? <a href="#">Contact Support</a></span>
+                </div>
+            </div>
+            <div class="login-right">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Streamline Your IT Operations</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Ticket management &amp; tracking</li>
+                        <li><i class="fas fa-check-circle"></i> On-site scheduling</li>
+                        <li><i class="fas fa-check-circle"></i> Knowledge base access</li>
+                        <li><i class="fas fa-check-circle"></i> Performance analytics</li>
+                    </ul>
+                    <div class="stats">
+                        <div><span>99.9%</span> Uptime</div>
+                        <div><span>24/7</span> Support</div>
+                        <div><span>500+</span> Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePassword() {
+            const pw = document.getElementById('password');
+            pw.type = pw.type === 'password' ? 'text' : 'password';
+        }
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
